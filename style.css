@@ -1,62 +1,97 @@
+/* use this html and body style to remove whitespace around the screen, and set body to 100% of the view */
 html {
     margin: 0;
     padding: 0;
 }
 body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100vw;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
-#container {
-    display: flex;
-    width: 100%;
+/* the div that takes up all of the body/parent's available space */
+#screen {
+    background-color: rgb(250, 250, 250);
     height: 100%;
+    width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
-
 }
 
-#card {
-    display: flex;
-    min-width: 300px;
-    max-width: 500px;
-    flex-direction: column;
-    min-height: 120px;
-    max-height: 200px;
-    background-color: rgb(106, 253, 255);
-    padding: 1em;
-    align-items: center;
-    border-radius: 24px;
-    box-shadow: 6px 10px 21px 5px rgba(0, 0, 0, 5);
-}
-
-#password {
-    margin: 1em;
-}
-
-.signInbutton {
-    margin: 1em;
+/* a div item that is supposed to be roughly the same across places. */
+.card {
+    background-color: rgb(255, 255, 255);
+    height: 30%;
+    width: 50%;
+    min-width: 250px;
+    max-width: 350px;
+    min-height: 180px;
+    max-height: 250px;
     border-radius: 20px;
-    border-top-color: transparent;
+    padding:20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
 }
 
-.signinbutton:focus {
-    outline: 0em;
-    
-}
-
+/* a css ruleset to apply to our entries. */
 .niceinput {
-    margin: 1em;
-    border-top-color: transparent ;
-    border-left-color: transparent;
-    border-right-color: transparent;
+    border: 1px solid rgba(0,0,0,0.24);
+    border-left: transparent;
+    border-top: transparent;
+    border-right: transparent;
     background-color: transparent;
+    padding: 5px;
 }
 
-.niceInput:focus {
+/* appllies to the `niceinput` class items when the item is focussed (clicked or tabbed into) */
+.niceinput:focus {
+    /* border: transparent; */
     outline: 0em;
-    background-color: rgba(1,1,1,0.1);
+}
+
+/* applies styles for the placeholder text*/
+.niceinput::placeholder {
+    color: black;
+    opacity: 40%;
+}
+
+
+
+/* applies to our title text using a class */
+.title {
+    margin: 0em;
+}
+
+/* use for buttons to make visually appealing :) */
+.nicebutton{
+    background-color: dodgerblue;
+    color: whitesmoke;
+    border-color: transparent;
+    border-radius: 20px;
+    max-height: 40px;
+    min-height: 20px;
+    height: 40px;
+    min-width: 180px;
+}
+
+
+.cardshadow {
+    -webkit-box-shadow: 3px 2px 5px 3px rgba(255, 255, 255, 0.24);
+    -moz-box-shadow: 3px 2px 5px 3px rgba(255, 255, 255, 0.24);
+    box-shadow: 3px 2px 5px 3px rgba(255, 254, 254, 0.24);
+}
+
+.boxshadow {
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(5, 5, 5, 0.24);
+    -moz-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.24);
+    box-shadow: 1px 1px 1px 1px rgba(3, 3, 3, 0.24);
+}
+
+.textshadow {
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
